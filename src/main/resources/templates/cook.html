@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+</head>
+<body>
+    <table border="1">
+    <tr>
+        <th>料理コード</th><th>料理名</th><th>値段</th>
+    </tr>
+    <tr th:each="cook:${cook}">
+        <td th:text="${cook.cookCode}"></td>
+        <td th:text="${cook.cookName}"></td>
+        <td th:text="${cook.cookPrice}"></td>
+    </tr>
+    </table>
+</body>
+
+</html>
