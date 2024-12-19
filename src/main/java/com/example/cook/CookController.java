@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class CookController {
 
     @Autowired
-    CookRepository cookRepository;
+    private CookService cookService;
 
     @RequestMapping("/")
     public ModelAndView index(ModelAndView mv) {
@@ -21,7 +21,7 @@ public class CookController {
 
     @RequestMapping("/menu")
     public ModelAndView menu(ModelAndView mv) {
-        List<Cook> cook = cookRepository.findAll();
+        List<Cook> cook = cookService.getAllCooks();
         mv.addObject("cook", cook);
         mv.setViewName("cook");
         return mv;
