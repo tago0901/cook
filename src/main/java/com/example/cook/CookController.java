@@ -19,6 +19,11 @@ public class CookController {
         return mv;
     }
 
+    @RequestMapping("/menu")
+    public ModelAndView menu() {
+        return cookService.getCooks();
+    }
+
     // @RequestMapping("/menu")
     // public ModelAndView menu(ModelAndView mv) {
     // List<Cook> cook = cookService.getAllCooks();
@@ -26,10 +31,4 @@ public class CookController {
     // mv.setViewName("cook");
     // return mv;
     // }
-
-    @RequestMapping("/menu")
-    public ModelAndView menu() {
-        return cookService.getCooks();
-    }
-
 }
