@@ -12,6 +12,10 @@ public class CookService {
     @Autowired
     private CookRepository cookRepository;
 
+    // public List<Cook> getAllCooks() {
+    // return cookRepository.findAll();
+    // }
+
     public ModelAndView getCooks() {
         List<Cook> cook = cookRepository.findAll();
         ModelAndView mv = new ModelAndView();
@@ -20,7 +24,5 @@ public class CookService {
         return mv;
 
     }
-    // public List<Cook> getAllCooks() {
-    // return cookRepository.findAll();
-    // }
+
 }
